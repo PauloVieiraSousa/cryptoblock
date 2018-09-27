@@ -5,7 +5,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "config": "ts-node set-env.ts",
     "build": "ng build --prod",
+    "build:develop": "npm run config -- --environment=dev && ng build --target=development --environment=dev --output-path=./dist --aot",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
